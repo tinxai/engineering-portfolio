@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#131614">
+  <meta name="description" content="Tin Nguyen — AI engineer and software engineer. Selected work in AI agents, computer vision, browser tools, and full-stack applications.">
+  <title>Tin Nguyen — AI & Software Engineer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="projects.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#home" aria-label="Tin Nguyen, home">tin<span class="wordmark-dot">.</span>nguyen<span class="wordmark-slash">/</span></a>
+      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" type="button">Menu <span aria-hidden="true">+</span></button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a><a href="#agent-lab">Agents &amp; RAG</a><a href="#experience">Experience</a><a href="#stack">Skills</a><a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> AI engineer / Software engineer</p>
+        <h1 id="hero-title">From AI models<br>to working<br><span>products.</span></h1>
+        <p class="hero-description">I’m Tin. I build AI agents, practical tools, and full-stack applications—with a background in computer vision and making AI easier to inspect.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="data/Tin_Nguyen_CV.pdf" target="_blank" rel="noopener">View CV <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="availability"><span class="availability-dot" aria-hidden="true"></span> Open to AI & software engineering roles</p>
+      </div>
+      <div class="hero-aside">
+        <div class="portrait-frame">
+          <img src="assets/tin-nguyen.webp" alt="Tin Nguyen" width="1122" height="1402" fetchpriority="high">
+          <div class="portrait-caption"><span>Tin (Kevin) Nguyen</span></div>
+        </div>
+        <div class="hero-links"><a href="https://github.com/tinxai" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/tin-kevin-nguyen/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a><a href="mailto:ngthanhtinqn@gmail.com">Email <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-footnote"><p>Browse the projects below, or take a look at the agent and RAG projects I’m planning.</p><a href="#projects" aria-label="Scroll to selected projects">↓</a></div>
+    </section>
+
+    <section class="section shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow section-number">Selected projects</p><h2 id="projects-title">Projects</h2></div><p>A few applications and tools I’ve built.<br>Open a project to see how it works.</p></div>
+      <div class="project-toolbar"><div class="project-filters" role="group" aria-label="Filter projects"><button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All projects</button><button type="button" class="filter" data-filter="ai" aria-pressed="false">AI systems</button><button type="button" class="filter" data-filter="fullstack" aria-pressed="false">Web apps</button><button type="button" class="filter" data-filter="tools" aria-pressed="false">Tools</button></div><span class="project-count mono" id="project-count" role="status" aria-live="polite">5 projects</span></div>
+      <div class="project-grid" id="project-grid"></div>
+      <noscript><p class="noscript">Explore the source on <a href="https://github.com/tinxai">GitHub</a>. Enable JavaScript to browse the project case studies.</p></noscript>
+    </section>
+
+    <section class="section shell agent-lab" id="agent-lab" aria-labelledby="agent-lab-title">
+      <div class="section-heading"><div><p class="eyebrow section-number">Planned projects</p><h2 id="agent-lab-title">Agents &amp; RAG</h2></div><p>Twelve ideas for the next stage of my portfolio.<br>These are build plans; the apps are not implemented yet.</p></div>
+      <div class="lab-grid">
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">01</span><span class="lab-status">Planned</span></div>
+          <h3>Dynamic Context Assembler</h3>
+          <p>Give an agent the context it needs without exceeding its token budget.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>A middleware layer that budgets tokens for instructions, retrieved documents, tool schemas, conversation history, and the model’s response. Keep required instructions intact and choose which evidence to include.</p><h4>How I’ll test it</h4><p>Check token limits across short and long tasks, compare against fixed-size context, and measure answer quality, evidence coverage, and cost.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">02</span><span class="lab-status">Planned</span></div>
+          <h3>Hybrid Reranking Search Stack</h3>
+          <p>Combine keyword search and semantic search, then rerank the results.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>BM25 retrieval alongside pgvector semantic search, result fusion, and a cross-encoder reranker. Use a clearly scoped document collection and a reproducible ingestion pipeline.</p><h4>How I’ll test it</h4><p>Evaluate Recall@k and nDCG on held-out queries. Compare keyword-only, vector-only, hybrid, and reranked results, including latency and cost.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">03</span><span class="lab-status">Planned</span></div>
+          <h3>GraphRAG Knowledge Extractor</h3>
+          <p>Connect facts scattered across documents through entities and relationships.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>Extract entities and relationships into Neo4j with links back to source passages. Add graph traversal for questions that genuinely need multiple documents.</p><h4>How I’ll test it</h4><p>Check extraction accuracy, source provenance, and multi-hop answer quality against a simpler retrieval baseline. Report when the graph does not help.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">04</span><span class="lab-status">Planned</span></div>
+          <h3>Self-Correcting Agentic RAG</h3>
+          <p>Retry retrieval when evidence is weak, and abstain when it stays insufficient.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>An answering workflow that grades retrieved passages, rewrites queries, and retries within a fixed budget. Return supporting citations or an explicit insufficient-evidence result.</p><h4>How I’ll test it</h4><p>Use answerable and unanswerable questions to measure grounded answers, citation correctness, false confidence, retry cost, and abstention behavior.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">05</span><span class="lab-status">Planned</span></div>
+          <h3>Durable State Machine Workflow</h3>
+          <p>Resume a long-running agent task after a restart or an external failure.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>A checkpointed Temporal or LangGraph workflow with typed state, bounded backoff, idempotent side effects, and an asynchronous approval step through Slack.</p><h4>How I’ll test it</h4><p>Stop and restart workers mid-task. Inject timeouts and duplicate events, then verify recovery, approval handling, and that external actions are not duplicated.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">06</span><span class="lab-status">Planned</span></div>
+          <h3>Raw MCP Server &amp; Client</h3>
+          <p>Implement the protocol behind a tightly scoped Postgres tool integration.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>A protocol-learning project implementing MCP client/server messages over JSON-RPC without a wrapper SDK. Expose explicitly allowed database operations with argument validation and least-privilege credentials.</p><h4>How I’ll test it</h4><p>Exercise protocol negotiation and errors, validate messages against the specification, and verify that disallowed tables and operations cannot be accessed.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">07</span><span class="lab-status">Planned</span></div>
+          <h3>3-Tier Memory &amp; Eviction Engine</h3>
+          <p>Keep useful context while giving memory a clear size and lifetime.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>Working memory for the current task, compressed episodic memory for sessions, and semantic memory for retrieval. Include capacity limits, TTL, ownership, and deletion rules.</p><h4>How I’ll test it</h4><p>Run long conversations and concurrent sessions. Measure retrieval usefulness and memory growth, and test stale-memory eviction and user isolation.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">08</span><span class="lab-status">Planned</span></div>
+          <h3>Typed Multi-Agent Swarm</h3>
+          <p>Let a researcher, coder, and reviewer hand off work through typed state.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>Three agents exchanging validated Pydantic objects rather than unstructured messages. Make responsibilities, shared context, termination, and retry limits explicit.</p><h4>How I’ll test it</h4><p>Compare task success, latency, and cost against a single-agent baseline. Inject malformed handoffs and check that invalid state is rejected.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">09</span><span class="lab-status">Planned</span></div>
+          <h3>Trajectory Eval CI Gate</h3>
+          <p>Test how an agent reaches an answer, not just the final text.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>A GitHub Actions evaluation that checks tool-call traces against permitted transitions, dependencies, task outcomes, and golden paths where ordering is required.</p><h4>How I’ll test it</h4><p>Verify that known regressions fail CI while alternative valid trajectories pass. Include forbidden tool use, skipped approvals, and incomplete tasks.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">10</span><span class="lab-status">Planned</span></div>
+          <h3>Inter-Agent Security &amp; PII Proxy</h3>
+          <p>Limit sensitive data and untrusted instructions passed between agents.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>Tokenize sensitive fields, validate handoffs, and detect suspicious instructions. Enforce permissions in tools and data access as well; a prompt filter alone is not the security boundary.</p><h4>How I’ll test it</h4><p>Use an adversarial test set for data leakage, cross-user access, and prompt injection. Measure missed attacks and false positives, and document remaining limits.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">11</span><span class="lab-status">Planned</span></div>
+          <h3>Semantic Cache &amp; Routing Gateway</h3>
+          <p>Choose an appropriate model and reuse answers only when it is safe to do so.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>A model gateway with workload-based routing, tenant-scoped semantic caching, cache invalidation, and bypass rules for sensitive or time-dependent requests.</p><h4>How I’ll test it</h4><p>Measure task quality, cost per successful task, p50/p95 latency, cache hit rate, and incorrect cache matches. Test that cached data never crosses user boundaries.</p></div>
+          </details>
+        </article>
+        <article class="lab-project">
+          <div class="lab-project-top"><span class="lab-number">12</span><span class="lab-status">Planned</span></div>
+          <h3>Public Architecture Teardown</h3>
+          <p>Publish three technical write-ups that explain the systems and their tradeoffs.</p>
+          <details class="lab-details">
+            <summary>Build plan <span aria-hidden="true">+</span></summary>
+            <div class="lab-plan"><h4>What I’ll build</h4><p>Write about agent coordination, durable state and recovery, and RAG quality versus cost. Include diagrams, reproducible commands, implementation decisions, and measured results.</p><h4>How I’ll test it</h4><p>Make each write-up traceable to runnable code and an evaluation setup. Explain failures, alternatives considered, and which conclusions the results actually support.</p></div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="shell experience-layout">
+        <div class="experience-intro"><p class="eyebrow section-number">Experience</p><h2 id="experience-title">Where I’ve worked</h2><p>My work has included browser agents, video analysis, document recognition, and games.</p><a class="text-link" href="data/Tin_Nguyen_CV.pdf" target="_blank" rel="noopener">The full CV <span aria-hidden="true">↗</span></a></div>
+        <div class="experience-list">
+          <article class="experience-item"><div class="organization-mark"><img src="assets/experience/uva.png" alt="" width="48" height="48"></div><div><div class="job-topline"><h3>Aikyam Lab · UVA</h3><time class="mono" datetime="2026-05">May–Jul 2026</time></div><p class="job-role">Research Assistant</p><p>Developed a multimodal web agent that locates evidence in text, images, and charts. Also built a defense against model distillation attacks.</p></div></article>
+          <article class="experience-item"><div class="organization-mark organization-mark--aioz"><img src="assets/experience/aioz.svg" alt="" width="48" height="48"></div><div><div class="job-topline"><h3>AIOZ</h3><span class="mono">2019–2020</span></div><p class="job-role">AI Engineer</p><p>Built video-analysis systems for license-plate recognition, moving-ball tracking, and identifying the same person across cameras.</p></div></article>
+          <article class="experience-item"><div class="organization-mark"><img src="assets/experience/gumi.svg" alt="" width="48" height="48"></div><div><div class="job-topline"><h3>Gumi</h3><span class="mono">2018–2019</span></div><p class="job-role">AI Engineer</p><p>Built an OCR model for handwritten Japanese text in scanned bills and documents.</p></div></article>
+          <article class="experience-item"><div class="organization-mark"><img src="assets/experience/gameloft.png" alt="" width="48" height="48"></div><div><div class="job-topline"><h3>Gameloft</h3><span class="mono">2017–2018</span></div><p class="job-role">Game Programmer</p><p>Built an arcade game with Cocos2d-x and C++.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="stack" aria-labelledby="stack-title">
+      <div class="section-heading"><div><p class="eyebrow section-number">Skills</p><h2 id="stack-title">Tools I use</h2></div><p>Languages, frameworks, and infrastructure<br>used across my projects and research.</p></div>
+      <div class="stack-grid">
+        <article class="stack-group"><h3>AI & machine learning</h3><p>Model workflows, retrieval, computer vision, and agent tooling.</p><ul class="technology-list"><li><img src="assets/icons/python.svg" alt="">Python</li><li><img src="assets/icons/pytorch.svg" alt="">PyTorch</li><li><img src="assets/icons/huggingface.svg" alt="">Hugging Face</li><li><img src="assets/icons/langchain.svg" alt="">LangChain</li><li><img src="assets/icons/langgraph.svg" alt="">LangGraph</li><li><img src="assets/icons/modelcontextprotocol.svg" alt="">MCP</li></ul></article>
+        <article class="stack-group"><h3>Software & interfaces</h3><p>APIs, product interfaces, browser extensions, and desktop tools.</p><ul class="technology-list"><li><img src="assets/icons/typescript.svg" alt="">TypeScript</li><li><img src="assets/icons/react.svg" alt="">React</li><li><img src="assets/icons/nextdotjs.svg" alt="">Next.js</li><li><img src="assets/icons/fastapi.svg" alt="">FastAPI</li><li><img src="assets/icons/java.svg" alt="">Java</li><li><img src="assets/icons/springboot.svg" alt="">Spring Boot</li><li><img src="assets/icons/cplusplus.svg" alt="">C++</li></ul></article>
+        <article class="stack-group"><h3>Data & infrastructure</h3><p>Storage, caching, containers, and development workflows.</p><ul class="technology-list"><li><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</li><li><img src="assets/icons/redis.svg" alt="">Redis</li><li><img src="assets/icons/sqlite.svg" alt="">SQLite</li><li><img src="assets/icons/docker.svg" alt="">Docker</li><li><img src="assets/icons/githubactions.svg" alt="">GitHub Actions</li><li><img src="assets/icons/googlecloud.svg" alt="">Google Cloud</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section shell about-section" id="about" aria-labelledby="about-title">
+      <div class="about-copy"><p class="eyebrow section-number">About me</p><h2 id="about-title">A bit about me</h2><p>I’m a Computer Science Ph.D. student at Auburn University. My research is about explainable AI and human–AI interaction, and I like turning that work into tools people can try.</p><p>Before Auburn, I studied computer science and engineering at Sejong University and the University of Science in Ho Chi Minh City. Outside work: soccer, badminton, and the gym.</p><a class="text-link" href="https://tinxai.github.io/" target="_blank" rel="noopener">Research & publications <span aria-hidden="true">↗</span></a></div>
+      <div class="background-panel"><div class="background-heading"><span>Education</span><span aria-hidden="true">↙</span></div><div class="education-row"><img src="assets/education/auburn.png" alt="" width="40" height="40"><div><h3>Auburn University</h3><p>Ph.D. · Computer Science & Engineering</p><span>2022–present</span></div></div><div class="education-row"><img src="assets/education/sejong.png" alt="" width="40" height="40"><div><h3>Sejong University</h3><p>M.Sc. · Computer Science & Engineering</p><span>2020–2022</span></div></div><div class="education-row"><img src="assets/education/hcmus.png" alt="" width="40" height="40"><div><h3>University of Science, VNU-HCM</h3><p>Computer Science & Engineering</p><span>2015–2019</span></div></div><div class="recognition"><span class="recognition-mark" aria-hidden="true">✳</span><div><strong>Second prize · Regions Banking Hackathon</strong><p>$6,000 team award · 2026</p></div></div></div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell contact-inner"><div><p class="eyebrow">Get in touch</p><h2 id="contact-title">Let’s talk</h2><a class="contact-email" href="mailto:ngthanhtinqn@gmail.com">ngthanhtinqn@gmail.com <span aria-hidden="true">↗</span></a></div><div class="contact-aside"><p>I’m open to AI engineering and software engineering opportunities.</p><button class="button button-contact" type="button" id="copy-email">Copy email <span aria-hidden="true">⧉</span></button><span class="copy-status" id="copy-status" aria-live="polite"></span></div></div></section>
+  </main>
+  <footer class="shell footer"><a class="wordmark" href="#home">tin<span class="wordmark-dot">.</span>nguyen<span class="wordmark-slash">/</span></a><p>Tin Nguyen · AI &amp; software engineering</p><div><a href="https://github.com/tinxai" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/tin-kevin-nguyen/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#home">Back to top ↑</a></div></footer>
+  <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-title"><div class="case-panel"><button type="button" class="case-close" aria-label="Close case study">Close <span aria-hidden="true">×</span></button><div id="case-content"></div></div></dialog>
+</body>
+</html>
