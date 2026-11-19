@@ -14,7 +14,7 @@ const stackHTML = stack => stack.map(([name, icon]) => `<span class="tech"><img 
 function renderProjects() {
   const projects = PROJECTS.filter(project => currentFilter === 'all' || project.category === currentFilter);
   grid.innerHTML = projects.map(project => {
-    const featured = currentFilter === 'all' && project.id === 'pageguide';
+    const featured = currentFilter === 'all' && project.featured === true;
     return `<article class="project-card${featured ? ' project-card--featured' : ''}">
       <button class="project-image-button" type="button" data-project="${project.id}" aria-label="Read the ${escapeHTML(project.name)} case study">
         <div class="project-image"><img src="${project.image}" alt="${escapeHTML(project.alt)}" loading="lazy"></div>

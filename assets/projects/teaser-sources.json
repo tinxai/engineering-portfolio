@@ -1,0 +1,14 @@
+{
+  "dealmesh-groceries.png": {
+    "method": "HTML/CSS render",
+    "source": "dealmesh-reference/figure.html",
+    "productSources": "dealmesh-reference/sources.json",
+    "reference": "https://www.weee.com/en",
+    "note": "Illustrative prices and seller bundles, not live offers or an integration."
+  },
+  "maicare-site.png": {
+    "method": "Public website screenshot",
+    "url": "https://maicares.org/",
+    "captured": "2026-11-19"
+  }
+}
