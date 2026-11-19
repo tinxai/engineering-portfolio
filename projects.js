@@ -2,49 +2,6 @@
 // Add measured results only after running and documenting the corresponding evaluation.
 const PROJECTS = [
   {
-    "id": "dealmesh",
-    "name": "DealMesh",
-    "category": "fullstack",
-    "label": "Full-stack application",
-    "headline": "Optimize the shopping list, not just one item.",
-    "description": "Compares product combinations across sellers, shipping costs, and bundle discounts—and explains the tradeoffs.",
-    "image": "assets/projects/dealmesh-groceries.png",
-    "alt": "DealMesh grocery interface showing real product photos and a whole-list seller-bundle comparison",
-    "imageType": "Grocery UI concept",
-    "stack": [
-      [
-        "Java",
-        "java.svg"
-      ],
-      [
-        "Spring Boot",
-        "springboot.svg"
-      ],
-      [
-        "React",
-        "react.svg"
-      ],
-      [
-        "PostgreSQL",
-        "postgresql.svg"
-      ],
-      [
-        "Redis",
-        "redis.svg"
-      ]
-    ],
-    "problem": "Choosing the cheapest listing for every item can produce a more expensive shopping list once shipping and seller discounts are included.",
-    "built": [
-      "A Spring Boot backend separates marketplace retrieval, product matching, and shopping-list optimization.",
-      "A React and TypeScript interface presents candidate bundles and explains product and seller choices.",
-      "PostgreSQL stores application data; Redis supports caching. A built-in demo marketplace makes the workflow reproducible without marketplace credentials."
-    ],
-    "tradeoff": "Totals are estimates from retrieved listings. Unknown shipping is flagged rather than assumed free. The application directs users to sellers rather than handling checkout.",
-    "focus": "Optimization · API design · Data persistence · Full-stack delivery",
-    "sourceNote": "HTML/CSS interface concept using product photos from Weee. Seller bundles, prices, delivery, and savings are illustrative; this is not a screenshot of the running app or a Weee integration.",
-    "featured": true
-  },
-  {
     "id": "maicare",
     "name": "MaiCare",
     "category": "ai",
